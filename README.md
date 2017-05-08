@@ -7,7 +7,7 @@
 
 ## Example creation usage:
 
-```js
+```
 https://afternoon-tundra-77333.herokuapp.com/new/http://www.example.com
 https://afternoon-tundra-77333.herokuapp.com//new/http://www.freecodecamp.com
 ```
