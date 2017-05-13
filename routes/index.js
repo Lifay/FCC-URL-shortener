@@ -31,7 +31,7 @@ router.get("/new/:url(*)", middleware.checkValidUrl, function (req, res) {
             console.log(err);
         } else {            
             res.json({
-                short_url: "http://localhost:3000/" + url.id,
+                short_url: "https://afternoon-tundra-77333.herokuapp.com/" + url.id,
                 url: url.url
             });
         }
