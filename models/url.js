@@ -1,4 +1,5 @@
-var mongoose = require("mongoose");
+var mongoose = require("mongoose"),
+    autoIncrement = require("mongoose-sequence");
 
 var urlSchema = new mongoose.Schema({
     url: String

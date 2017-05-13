@@ -1,14 +1,16 @@
 var express = require("express"),
         app = express(),
-     mongoose = require("mongoose")
-autoIncrement = require("mongoose-sequence")
+     mongoose = require("mongoose");
+require("dotenv").config({
+    silent: true
+});
 
 app.set("view engine", "ejs");
-var indexRoutes = require("./routes/index");
-mongoose.connect("mongodb://localhost/urlshortener");
+mongoose.connect(process.env.DATABASE);
 
+var indexRoutes = require("./routes/index");
 app.use(indexRoutes);
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
     console.log("server started");
 });
